@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+        content="Ideal Veículos em Agudos. Compra, venda, troca, financiamento e seguro automotivo. WhatsApp: (14) 99106-2069."
+        name="description" />
+    <title>Ideal Veículos - Seu novo carro está aqui</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#B84A2F',
+                        copper: '#D56A3F',
+                        dark: '#060607',
+                        graphite: '#101114',
+                        soft: '#F7F5F1',
+                        panel: '#F1EEE8',
+                        muted: '#6E6A64'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    boxShadow: {
+                        premium: '0 28px 90px rgba(6, 6, 7, 0.18)',
+                        card: '0 16px 38px rgba(6, 6, 7, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .hero-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0.06) 45%, rgba(0, 0, 0, 0.56) 100%),
+                radial-gradient(circle at 82% 20%, rgba(184, 74, 47, 0.34), transparent 30rem);
+            pointer-events: none;
+        }
+
+        .dark-texture {
+            background-image:
+                radial-gradient(circle at 18% 22%, rgba(184, 74, 47, 0.20), transparent 24rem),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: auto, 48px 48px, 48px 48px;
+        }
+
+        .soft-texture {
+            background-image:
+                radial-gradient(circle at 12% 12%, rgba(184, 74, 47, 0.08), transparent 26rem),
+                radial-gradient(circle at 90% 20%, rgba(6, 6, 7, 0.045), transparent 20rem);
+        }
+
+        .car-shape {
+            clip-path: polygon(4% 58%, 14% 42%, 31% 31%, 61% 31%, 78% 42%, 92% 50%, 97% 64%, 92% 75%, 8% 75%);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-dark font-sans antialiased">
+    <main>
+        <section class="relative bg-white p-3 sm:p-5 lg:p-7">
+            <div
+                class="hero-card relative h-[82vh] min-h-[620px] overflow-hidden rounded-[2rem] bg-zinc-900 shadow-premium">
+                <img alt="Carro em destaque" class="absolute inset-0 h-full w-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQmzHOpmOe-LTctKCaBb3jzOaf3-czSvAqpD7TQH9LDOp9h6WF7k5vxNjWpc4Fif27hhhp5DF0RGdAipxslzryq9cKI4Th7103MkX3uP0-EZW6i1dUBFDXyWathdk_kXI6q-eKauCekjq_n857MIzOc_EdkpB3GAZ0orrhnUl47GEXKyoD7-qHCkdn0SUkrUJtx6QtL0u2LQJGXErr9Ha2rSKS_93vuuAw3FJ6EBmhYOcpaPgDK5DcVJy8QDNBND3ywhTEgZc208I" />
+
+                <header class="absolute left-0 right-0 top-0 z-20 flex items-center justify-between px-5 py-5 lg:px-10">
+                    <a class="flex items-center gap-3" href="#inicio" aria-label="Ideal Veículos">
+                        <img alt="Logo Ideal Veículos" class="h-11 w-11 rounded-full bg-white object-contain p-1"
+                            src="../references/logo.jpg" />
+                        <span class="text-white font-black text-xl tracking-tight">Ideal<span
+                                class="text-primary">.</span></span>
+                    </a>
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a class="text-white hover:text-primary transition-colors font-semibold text-sm"
+                            href="#inicio">Home</a>
+                        <a class="text-white hover:text-primary transition-colors font-semibold text-sm"
+                            href="#servicos">Serviços</a>
+                        <a class="text-white hover:text-primary transition-colors font-semibold text-sm"
+                            href="#como-funciona">Como funciona</a>
+                        <a class="text-white hover:text-primary transition-colors font-semibold text-sm"
+                            href="#colecao">Opções</a>
+                        <a class="text-white hover:text-primary transition-colors font-semibold text-sm"
+                            href="#contato">Contato</a>
+                    </nav>
+                    <a class="bg-white text-dark px-5 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-primary hover:text-white transition-all"
+                        href="https://wa.me/5514991062069?text=Ola,%20vim%20pelo%20site%20da%20Ideal%20Veiculos%20e%20quero%20atendimento."
+                        rel="noopener" target="_blank">
+                        WhatsApp
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"></path>
+                        </svg>
+                    </a>
+                </header>
+
+                <div class="absolute left-5 top-24 z-20 max-w-md sm:left-10 lg:top-28">
+                    <p
+                        class="inline-flex rounded-full border border-white/20 px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-white glass-effect">
+                        Compra | Venda | Troca | Financiamento
+                    </p>
+                    <p class="mt-5 text-lg font-semibold leading-7 text-white/88">
+                        Seu novo carro está aqui, com atendimento direto em Agudos.
+                    </p>
+                </div>
+
+                <div class="absolute bottom-2 left-0 right-0 z-10 px-4 text-center lg:bottom-0">
+                    <h1
+                        class="select-none font-black uppercase leading-none tracking-[-0.085em] text-white text-[3.65rem] sm:text-[7rem] lg:text-[11rem] xl:text-[13rem]">
+                        Ideal Veículos
+                    </h1>
+                </div>
+
+                <div
+                    class="absolute bottom-8 left-6 z-20 hidden max-w-sm rounded-3xl border border-white/20 p-6 text-white glass-effect lg:block">
+                    <p class="text-xs font-black uppercase tracking-[0.26em] text-primary">R. José de Rosas, 445</p>
+                    <p class="mt-3 text-sm leading-6 text-white/85">
+                        Compra, venda, troca, financiamento e seguro automotivo com orientação clara do início ao fim.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="inicio" class="bg-white pb-12 pt-6 border-b border-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-between items-center gap-8 text-gray-300">
+                    <span class="text-2xl font-black tracking-tight opacity-70">Compra</span>
+                    <span class="text-2xl font-black tracking-tight opacity-60">Venda</span>
+                    <span class="text-2xl font-black tracking-tight opacity-70">Troca</span>
+                    <span class="text-2xl font-black tracking-tight opacity-60">Financiamento</span>
+                    <span class="text-2xl font-black tracking-tight opacity-70">Seguro</span>
+                    <span class="text-2xl font-black tracking-tight opacity-60">Agudos</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="bg-dark text-white py-24 rounded-[3rem] mx-4 mt-8 dark-texture overflow-hidden">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="flex flex-col lg:flex-row justify-between items-start mb-16 gap-8">
+                    <div class="max-w-xl">
+                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Nossos
+                            serviços</span>
+                        <h2 class="text-4xl lg:text-5xl font-black leading-tight">Um atendimento completo para seu
+                            próximo carro</h2>
+                    </div>
+                    <p class="text-gray-400 max-w-md text-lg leading-8">
+                        A Ideal Veículos une negociação, documentação, financiamento e seguro em uma experiência
+                        simples,
+                        elegante e objetiva.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <article
+                        class="bg-white/[0.055] p-8 lg:p-10 rounded-3xl border border-white/10 hover:border-primary/70 transition-colors group shadow-card">
+                        <div
+                            class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8 ring-1 ring-white/10 group-hover:bg-primary transition-colors">
+                            <svg class="h-8 w-8 text-primary group-hover:text-white" fill="none" stroke="currentColor"
+                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 13h18M5 13l2-5h10l2 5M7 13v4m10-4v4M6 17h2m8 0h2" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Compra e venda</h3>
+                        <p class="text-gray-400 leading-7">
+                            Você encontra boas oportunidades ou negocia seu veículo atual com avaliação clara e
+                            atendimento próximo.
+                        </p>
+                    </article>
+                    <article
+                        class="bg-white/[0.055] p-8 lg:p-10 rounded-3xl border border-white/10 hover:border-primary/70 transition-colors group shadow-card">
+                        <div
+                            class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8 ring-1 ring-white/10 group-hover:bg-primary transition-colors">
+                            <svg class="h-8 w-8 text-primary group-hover:text-white" fill="none" stroke="currentColor"
+                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 7h11m0 0-3-3m3 3-3 3M17 17H6m0 0 3 3m-3-3 3-3" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Troca e financiamento</h3>
+                        <p class="text-gray-400 leading-7">
+                            Use seu carro como parte da negociação e avalie condições de financiamento antes de decidir.
+                        </p>
+                    </article>
+                    <article
+                        class="bg-white/[0.055] p-8 lg:p-10 rounded-3xl border border-white/10 hover:border-primary/70 transition-colors group shadow-card">
+                        <div
+                            class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8 ring-1 ring-white/10 group-hover:bg-primary transition-colors">
+                            <svg class="h-8 w-8 text-primary group-hover:text-white" fill="none" stroke="currentColor"
+                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9 12l2 2 4-4m5-4.5A11.7 11.7 0 0 1 12 3 11.7 11.7 0 0 1 4 5.5V11c0 5 3.4 8.3 8 10 4.6-1.7 8-5 8-10V5.5Z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Seguro automotivo</h3>
+                        <p class="text-gray-400 leading-7">
+                            Cotação orientada para proteger seu veículo conforme perfil, rotina e tipo de uso.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="como-funciona" class="py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="lg:w-1/2">
+                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Como
+                            funciona</span>
+                        <h2 class="text-4xl lg:text-5xl font-black mb-12">Da conversa ao carro novo em poucos passos
+                        </h2>
+                        <div class="space-y-5">
+                            <div
+                                class="flex gap-6 items-start bg-white p-6 rounded-2xl shadow-card border-l-4 border-primary">
+                                <span
+                                    class="flex-shrink-0 w-10 h-10 bg-dark text-white rounded-full flex items-center justify-center font-bold">01</span>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2">Conte o que procura</h4>
+                                    <p class="text-muted leading-7">Compra, venda, troca, financiamento ou seguro. A
+                                        Ideal entende sua necessidade antes de indicar o caminho.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-soft transition-colors">
+                                <span
+                                    class="flex-shrink-0 w-10 h-10 bg-gray-200 text-dark rounded-full flex items-center justify-center font-bold">02</span>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2">Avalie as opções</h4>
+                                    <p class="text-muted leading-7">Veja possibilidades reais de negociação, entrada,
+                                        parcela, troca e proteção para o veículo.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-soft transition-colors">
+                                <span
+                                    class="flex-shrink-0 w-10 h-10 bg-gray-200 text-dark rounded-full flex items-center justify-center font-bold">03</span>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2">Feche com segurança</h4>
+                                    <p class="text-muted leading-7">Você decide com clareza e segue com tudo encaminhado
+                                        para sair de carro novo.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-soft transition-colors">
+                                <span
+                                    class="flex-shrink-0 w-10 h-10 bg-gray-200 text-dark rounded-full flex items-center justify-center font-bold">04</span>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-2">Proteja seu veículo</h4>
+                                    <p class="text-muted leading-7">Inclua seguro automotivo no planejamento e saia com
+                                        mais tranquilidade.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 relative">
+                        <div class="absolute -inset-8 rounded-[2.5rem] bg-soft -z-10"></div>
+                        <div class="bg-white rounded-3xl p-8 shadow-premium relative z-10 border border-gray-100">
+                            <div class="flex justify-between items-center mb-6">
+                                <h4 class="text-xl font-bold">Atendimento Ideal</h4>
+                                <span class="text-xs font-bold bg-dark text-white px-3 py-1 rounded-full">01</span>
+                            </div>
+                            <div class="grid grid-cols-4 gap-4 mb-10">
+                                <div class="flex flex-col items-center gap-2">
+                                    <div
+                                        class="bg-primary/10 p-4 rounded-xl border border-primary/20 w-full text-center">
+                                        <span class="text-2xl font-black text-primary">C</span>
+                                    </div>
+                                    <span class="text-xs font-semibold">Compra</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <div class="bg-gray-100 p-4 rounded-xl w-full text-center">
+                                        <span class="text-2xl font-black text-dark">V</span>
+                                    </div>
+                                    <span class="text-xs font-semibold text-muted">Venda</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <div class="bg-gray-100 p-4 rounded-xl w-full text-center">
+                                        <span class="text-2xl font-black text-dark">T</span>
+                                    </div>
+                                    <span class="text-xs font-semibold text-muted">Troca</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <div class="bg-gray-100 p-4 rounded-xl w-full text-center">
+                                        <span class="text-2xl font-black text-dark">S</span>
+                                    </div>
+                                    <span class="text-xs font-semibold text-muted">Seguro</span>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 rounded-2xl p-6">
+                                <div class="flex justify-between items-center mb-4">
+                                    <h4 class="font-bold">Seu plano de compra</h4>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                                        <div
+                                            class="h-20 rounded-lg bg-gradient-to-br from-dark to-primary mb-4 car-shape">
+                                        </div>
+                                        <p class="text-sm font-bold">Troca usada</p>
+                                        <p class="text-primary font-bold text-sm">avaliação</p>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                                        <div
+                                            class="h-20 rounded-lg bg-gradient-to-br from-gray-200 to-white mb-4 car-shape border border-gray-100">
+                                        </div>
+                                        <p class="text-sm font-bold">Financiamento</p>
+                                        <p class="text-primary font-bold text-sm">simulação</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="colecao" class="py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Opções
+                        Ideal</span>
+                    <h2 class="text-4xl lg:text-5xl font-black">Escolha o caminho do seu próximo carro</h2>
+                    <div class="flex flex-wrap justify-center gap-4 mt-10">
+                        <button class="px-8 py-3 bg-dark text-white rounded-full font-semibold">Todos</button>
+                        <button
+                            class="px-8 py-3 bg-gray-100 text-muted rounded-full font-semibold hover:bg-gray-200 transition-colors">Compra</button>
+                        <button
+                            class="px-8 py-3 bg-gray-100 text-muted rounded-full font-semibold hover:bg-gray-200 transition-colors">Venda</button>
+                        <button
+                            class="px-8 py-3 bg-gray-100 text-muted rounded-full font-semibold hover:bg-gray-200 transition-colors">Troca</button>
+                        <button
+                            class="px-8 py-3 bg-gray-100 text-muted rounded-full font-semibold hover:bg-gray-200 transition-colors">Seguro</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article
+                        class="group border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-all bg-white">
+                        <img alt="Compra de veículos"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkQSxmuhEdcoIXyLE2muN2gsJ4-WqbJt3kodz7ImalG4szDQU1ZC5JyU0uoRDKMmy44_kLYE8zlzLIY7w4nqMT2r8JltQflJfuWNtWgvNRiD9WEquXsJQWx335LRcfzmVmFDtyGunPX-9w4Nbq0BNTGTMCgA5wh5084UB5K3ZRq9cgmfJ2hF6sXU01JAUgtGHX0Ohz2w9DsBFClZe-H5atVMdjwZEaGcUJVyvBHRR96fPf_aBv8uNtz2AismCDEkePgqpH2DIGwnw" />
+                        <div class="p-6">
+                            <div class="flex justify-between gap-4">
+                                <h4 class="text-xl font-bold">Comprar veículo</h4>
+                                <span class="text-primary font-black">01</span>
+                            </div>
+                            <p class="mt-3 text-sm text-muted leading-7">Atendimento para encontrar a opção certa sem
+                                pressa e sem negociação confusa.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="group border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-all bg-white">
+                        <img alt="Venda de veículos"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGyJHo4STLBqQjP_NlrDhJ8R9dyBlZQpPx1oA2jcw4QEFox6PXZ-mmPAhbuDty34-DznSJJ1yI3IDbB--ov0XPFHrycrwd8tZVno3mIxwupsXmgKVpkxdcQTUqWXnV3iXDgAo5p2iwaeazL6HfjZcjXeN8ENS7M2ZgW8ASvV4sguG_ypqhJ-j77Ir1ts4qEmpBeXl4XNsO66dScI9rUckcVLmUL5Qpq2BrhWhuEAWAOm-Vi4mHxR1_5aDaZzveYD7O5QCDBhZAoHc" />
+                        <div class="p-6">
+                            <div class="flex justify-between gap-4">
+                                <h4 class="text-xl font-bold">Vender veículo</h4>
+                                <span class="text-primary font-black">02</span>
+                            </div>
+                            <p class="mt-3 text-sm text-muted leading-7">Avaliação objetiva para transformar seu carro
+                                atual em oportunidade real.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="group border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-all bg-white">
+                        <img alt="Troca de veículos"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj3k7FhXXhxam9nLyBiHge5GgV1tTRUEOyjYeF9T0c-NbCxKDMQtTQG5VDgtZ72240k8Qvv5rhBazvvIfe6hs2m7BBjwGmt0zi40x1yKPiYvx5Vc77UG9jl46om5B9RsmiMl3iyxrKjjrtVn_zpEwG3GozJXcGN6pkhYXSmPwbjl4bh1QRrYwVXOZH809p899jBE4kgCrW2I_HJfCkZiKtlvwgsVbdRC4vG8DaXf3cviFDVsceyQAEZErXDQmBvdAo4a0CLD6uVYQ" />
+                        <div class="p-6">
+                            <div class="flex justify-between gap-4">
+                                <h4 class="text-xl font-bold">Trocar veículo</h4>
+                                <span class="text-primary font-black">03</span>
+                            </div>
+                            <p class="mt-3 text-sm text-muted leading-7">Use seu carro na negociação e avance para um
+                                modelo mais adequado.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="group border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-all bg-white">
+                        <img alt="Financiamento automotivo"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF1cgq0RhMzDHKcS608y0wDzaXdAnu600u1bJSveeTD8mXp-pVg7PiARcTLszeM0FpXnlVvAJF_4wmQK-drgfGjrIeXrDzuUjcfMtYlWsXoDg-i8aZ5sl9hHJiDlcaS9SzGolIG1L_38hDVZ3tcWX3Jp96eUp5xLGSEq4mN9dSmYXO8uM0Pyd6AwdWwzsr0aPLMQ__ziofx-no1oDrSg6KG92stDIYk5yB_aw8KYn_fTlQX1lO-CUJ2OmsEeoXqLFkPA6_mpQd59Y" />
+                        <div class="p-6">
+                            <div class="flex justify-between gap-4">
+                                <h4 class="text-xl font-bold">Financiar</h4>
+                                <span class="text-primary font-black">04</span>
+                            </div>
+                            <p class="mt-3 text-sm text-muted leading-7">Simulação de possibilidades para uma parcela
+                                compatível com seu momento.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="group border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-all bg-white">
+                        <img alt="Seguro automotivo"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9hixBoe2CZMnc5TCS1CpkhFBF3-8H_3UcD3qqxxCXCynoegWTOYaw3pfir3R51iomWt5mL5T6N6WxEll4qcrhSDt1YU5s7ucg7mAwCXkzXYglHT0fCVyUXXcROzDdMi2Zcdo_8NdoAwWR2gSfptiN2H01V2og0fXErCG1yxi-6yp5axO3oC0fsaJym2PypJYPr7yFnCZ7LWHV9SzulAosoPZZdr85HYALycdAFqdq9aMAIXh9tQWPOzfx3NocXzyLkfCa-nXUREc" />
+                        <div class="p-6">
+                            <div class="flex justify-between gap-4">
+                                <h4 class="text-xl font-bold">Seguro automotivo</h4>
+                                <span class="text-primary font-black">05</span>
+                            </div>
+                            <p class="mt-3 text-sm text-muted leading-7">Cotação pensada para proteger seu veículo desde
+                                o primeiro dia.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="group border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-all bg-white">
+                        <img alt="Atendimento automotivo"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWzx_qhx0n4vrn5cRXw-6jW04_mor74b80NeaDU51WlQPhJJHO6ygTBzjNiiEZta5_vaZzFaBUXdm0R1TdzUZmwgGED6HEzioM18PZ5E7JzTgy-ONf8uqUXa_rgCvm-nhHfxAyUp2H28kE69MUmVPuFmKXfaiyE7Ywq6TJvmMA91vK0t3Pch_TVEB6b8uTEdV0aiVJw8mVvV6qwNiC5IHBiRUIQCtyt2sKH7OgeYduuXEmIBzV041f5k-ENhXKaNnbwvq4Yd67tjM" />
+                        <div class="p-6">
+                            <div class="flex justify-between gap-4">
+                                <h4 class="text-xl font-bold">Atendimento direto</h4>
+                                <span class="text-primary font-black">06</span>
+                            </div>
+                            <p class="mt-3 text-sm text-muted leading-7">WhatsApp rápido para começar a negociação com
+                                quem resolve.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a class="inline-flex bg-dark text-white px-10 py-4 rounded-full font-bold hover:bg-primary transition-colors"
+                        href="https://wa.me/5514991062069?text=Ola,%20quero%20atendimento%20da%20Ideal%20Veiculos."
+                        rel="noopener" target="_blank">Falar com a Ideal</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="seguro" class="py-24 bg-soft overflow-hidden soft-texture">
+            <div class="container mx-auto px-4">
+                <div
+                    class="bg-white rounded-[3rem] p-10 lg:p-20 flex flex-col lg:flex-row items-center gap-16 shadow-lg border border-gray-100 overflow-hidden">
+                    <div class="lg:w-1/2">
+                        <span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Seguro e
+                            proteção</span>
+                        <h2 class="text-4xl lg:text-5xl font-black leading-tight mb-8">
+                            Seu carro protegido desde o primeiro dia.
+                        </h2>
+                        <p class="text-muted leading-8 text-lg">
+                            Além da negociação do veículo, a Ideal Veículos também atende seguro automotivo. Você recebe
+                            orientação para cotar uma cobertura adequada para seu carro, sua rotina e seu bolso.
+                        </p>
+                        <div class="mt-8 flex flex-wrap gap-3">
+                            <span class="rounded-full bg-gray-100 px-4 py-2 text-sm font-bold text-muted">Roubo e
+                                furto</span>
+                            <span class="rounded-full bg-gray-100 px-4 py-2 text-sm font-bold text-muted">Colisão</span>
+                            <span
+                                class="rounded-full bg-gray-100 px-4 py-2 text-sm font-bold text-muted">Assistência</span>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 relative flex justify-center">
+                        <div
+                            class="relative z-10 w-full max-w-sm rotate-[-4deg] rounded-[2.25rem] bg-dark p-4 text-white shadow-2xl">
+                            <div class="rounded-[1.75rem] border border-white/10 bg-graphite p-6">
+                                <div class="flex items-center justify-between">
+                                    <img alt="Logo Ideal Veículos"
+                                        class="h-16 w-16 rounded-full bg-white object-contain p-2"
+                                        src="../references/logo.jpg" />
+                                    <span class="rounded-full bg-primary px-3 py-1 text-xs font-black">Agudos</span>
+                                </div>
+                                <p class="mt-8 text-sm font-bold uppercase tracking-widest text-primary">Ideal Veículos
+                                </p>
+                                <h3 class="mt-3 text-3xl font-black">Compra | Venda | Troca | Financiamento</h3>
+                                <p class="mt-5 text-white/70 leading-7">
+                                    R. José de Rosas, 445 - Agudos<br />WhatsApp: (14) 99106-2069
+                                </p>
+                                <a class="mt-8 block rounded-full bg-white py-3 text-center text-sm font-black text-dark transition hover:bg-primary hover:text-white"
+                                    href="https://wa.me/5514991062069?text=Ola,%20quero%20cotacao%20de%20seguro%20automotivo."
+                                    rel="noopener" target="_blank">Cotar seguro</a>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-10 left-1/2 -z-0 h-72 w-56 translate-x-10 rotate-[6deg] rounded-[2rem] bg-dark/10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato" class="bg-dark text-white pt-20 pb-10">
+        <div class="container mx-auto px-4">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center bg-zinc-900 p-8 lg:p-12 rounded-[2rem] mb-16 border border-zinc-800">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Fale com a Ideal Veículos</h3>
+                    <p class="text-gray-400">Seu novo carro está aqui. Atendimento direto em Agudos.</p>
+                </div>
+                <a class="bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-colors"
+                    href="https://wa.me/5514991062069?text=Ola,%20vim%20pelo%20site%20da%20Ideal%20Veiculos."
+                    rel="noopener" target="_blank">Chamar no WhatsApp</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img alt="Logo Ideal Veículos" class="h-10 w-10 rounded-full bg-white object-contain p-1"
+                            src="../references/logo.jpg" />
+                        <span class="text-white font-bold text-2xl tracking-tight">Ideal<span
+                                class="text-primary">.</span></span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm mb-8 leading-relaxed">
+                        Ideal Veículos em Agudos. Compra, venda, troca, financiamento e seguro automotivo.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Serviços</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li>Compra</li>
+                        <li>Venda</li>
+                        <li>Troca</li>
+                        <li>Financiamento</li>
+                        <li>Seguro automotivo</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Contato</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li>R. José de Rosas, 445</li>
+                        <li>Agudos - SP</li>
+                        <li>(14) 99106-2069</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-10 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>Ideal Veículos. Todos os direitos reservados.</p>
+                <p>Compra | Venda | Troca | Financiamento | Seguro</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
