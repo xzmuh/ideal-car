@@ -17,7 +17,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const logoUrl = new URL('../references/logo.jpg', import.meta.url).href;
 const whatsappBase = 'https://wa.me/5514991062069';
-const heroImage = new URL('../references/fotos/header.jpeg', import.meta.url).href;
+const heroImage = new URL('../references/fotos/ohomi.jpeg', import.meta.url).href;
 const civicImage = new URL('../references/fotos/estoque/honda-civic-2020.jpg', import.meta.url).href;
 const corollaImage = new URL('../references/fotos/estoque/toyota-corolla-2021.jpg', import.meta.url).href;
 const onixImage = new URL('../references/fotos/estoque/chevrolet-onix-2022.jpg', import.meta.url).href;
