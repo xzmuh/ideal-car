@@ -313,11 +313,11 @@ function HowItWorks() {
   const active = idealOptions[activeIndex];
 
   return (
-    <AnimatedSection id="como-funciona" className="overflow-hidden bg-white py-16 soft-texture sm:py-24">
+    <section id="como-funciona" className="overflow-hidden bg-white py-12 soft-texture sm:py-24">
       <div className="container mx-auto px-4">
         <div className="mb-9 text-center sm:mb-12">
-          <FadeIn as="span" className="mb-4 block text-sm font-bold uppercase tracking-widest text-primary">Opções Ideal</FadeIn>
-          <AnimatedTitle as="h2" className="text-3xl font-black sm:text-4xl lg:text-6xl" text="Escolha o caminho do seu próximo carro" />
+          <span className="mb-3 block text-xs font-bold uppercase tracking-widest text-primary sm:mb-4 sm:text-sm">Opções Ideal</span>
+          <h2 className="text-3xl font-black sm:text-4xl lg:text-6xl">Escolha o caminho do seu próximo carro</h2>
           <div className="filter-marquee -mx-4 mt-7 overflow-hidden sm:mx-auto sm:mt-9 sm:max-w-3xl">
             <div className="filter-marquee-track flex w-max gap-2 py-2">
               {[...idealOptions.slice(0, 5), ...idealOptions.slice(0, 5)].map((item, index) => {
@@ -328,7 +328,7 @@ function HowItWorks() {
           </div>
         </div>
         <div className="grid gap-8 lg:grid-cols-[340px_1fr]">
-          <StaggerContainer className="hide-scrollbar relative -mx-4 flex snap-x gap-3 pt-2overflow-x-auto px-4 pb-3 lg:mx-0 lg:block lg:space-y-2 lg:overflow-visible lg:px-0 lg:pb-0 lg:before:absolute lg:before:bottom-8 lg:before:left-6 lg:before:top-8 lg:before:w-px lg:before:bg-gray-200">
+          <StaggerContainer className="options-rail hide-scrollbar relative -mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-3 pt-2 lg:mx-0 lg:block lg:space-y-2 lg:overflow-visible lg:px-0 lg:pb-0 lg:before:absolute lg:before:bottom-8 lg:before:left-6 lg:before:top-8 lg:before:w-px lg:before:bg-gray-200">
             {idealOptions.map((item, index) => (
               <StaggerItem as="button" className={`relative z-10 flex min-w-[82vw] snap-center items-center gap-3 rounded-2xl p-4 text-left transition-all sm:min-w-[330px] lg:w-full lg:min-w-0 lg:gap-4 ${activeIndex === index ? 'bg-white shadow-card ring-1 ring-primary/30' : 'bg-white/60 hover:bg-white/70'}`} key={item.title} onClick={() => setActiveIndex(index)} type="button">
                 <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-black ${activeIndex === index ? 'bg-primary text-white' : 'bg-white text-dark ring-1 ring-gray-200'}`}>{String(index + 1).padStart(2, '0')}</span>
@@ -337,7 +337,7 @@ function HowItWorks() {
               </StaggerItem>
             ))}
           </StaggerContainer>
-          <RevealOnScroll className="relative min-h-0 overflow-hidden rounded-[1.75rem] border border-gray-200 bg-white p-6 shadow-premium sm:min-h-[580px] sm:rounded-[2rem] sm:p-11">
+          <RevealOnScroll className="option-panel relative min-h-0 overflow-hidden rounded-[1.75rem] border border-gray-200 bg-white p-6 shadow-premium sm:min-h-[580px] sm:rounded-[2rem] sm:p-11">
             <span className="absolute right-7 top-3 text-[8rem] font-black leading-none text-dark/[0.035] sm:text-[11rem]">{String(activeIndex + 1).padStart(2, '0')}</span>
             <div className="relative z-10 max-w-2xl">
               <span className="inline-flex rounded-full border border-primary/20 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-primary">{active.category}</span>
@@ -353,7 +353,7 @@ function HowItWorks() {
           </RevealOnScroll>
         </div>
       </div>
-    </AnimatedSection>
+    </section>
   );
 }
 

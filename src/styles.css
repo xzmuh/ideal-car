@@ -125,6 +125,14 @@ select {
     -webkit-backdrop-filter: blur(18px);
   }
 
+  #como-funciona,
+  #como-funciona .options-rail > *,
+  #como-funciona .option-panel {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+
   section,
   footer {
     scroll-margin-top: 1rem;
